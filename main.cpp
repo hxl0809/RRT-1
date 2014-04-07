@@ -6,6 +6,5 @@ int main(){
 
 	rrt.hellow();
 
-
 	return 0;
 }
