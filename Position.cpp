@@ -9,10 +9,30 @@
 
 #include "Position.h"
 
-Position Position::operator +(const Position& rhs){
+Position Position::operator+(const Position& rhs){
 
 	Position tmp;
-	tmp.x() = mX + rhs.x();
+	tmp.x() = this->x() + rhs.x();
+	tmp.y() = this->y() + rhs.y();
+
+	return tmp;
+}
+
+Position Position::operator-(const Position& rhs){
+
+	Position tmp;
+	tmp.x() = this->x() + rhs.x();
+	tmp.y() = this->y() + rhs.y();
+
+	return tmp;
+}
 
 
+Position Position::operator*(const Position& rhs){
+
+	Position tmp;
+	tmp.x() = this->x() * rhs.x();
+	tmp.y() = this->y() * rhs.y();
+
+	return tmp;
 }
