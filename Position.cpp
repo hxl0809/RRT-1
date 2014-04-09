@@ -34,5 +34,6 @@ Position Position::operator*(const Position& rhs){
 	tmp.x() = this->x() * rhs.x();
 	tmp.y() = this->y() * rhs.y();
 
+
 	return tmp;
 }

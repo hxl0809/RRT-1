@@ -11,7 +11,6 @@
 #include <iostream>
 #include <math.h>
 
-
 class Position{
 public:
 
