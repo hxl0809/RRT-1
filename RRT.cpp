@@ -1,14 +1,64 @@
-/*
- * RRT.cpp
- *
- *  Created on: 2014/04/03
- *      Author: Shinobu
- */
-
 #include "RRT.h"
 
-void RRT::hellow(){
-	std::cout << " hellow\n";
+RRT::RRT(){
+	init.SetPosition(1,1);
+	goal.SetPosition(50,50);
+	t = 0;
+	mthre = sqrt(2);
+
+	mMap = new map();
 }
+
+
+/*
+ * ツリーGの初期化
+ */
+void RRT::q_init(){
+
+	mMap->SetMap();
+}
+
+
+void RRT::RANDOMCONFIG(){
+
+	qrand.SetPosition( (int)(rand()%100)+1, (int)(rand()%100)+1);
+
+//	std::cout << qrand.x() << "\n";
+//	std::cout << qrand.y() << "\n";
+}
+
+
+void RRT::EXTEND(){
+
+	//一回目は初期位置がqnear
+	if(t==0){
+		qnear = init;
+		t++;
+	}
+
+	double length = sqrt( (qrand.y()-qnear.y()) + (qrand.x()-qnear.x()) );
+
+	//ノード間が移動できるなら
+	if(length <= mthre){
+
+
+	}
+
+
+}
+
+void RRT::debug(){
+
+	mMap->ViewMap();
+
+}
+
+
+
+
+
+
+
+
 
 

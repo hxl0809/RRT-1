@@ -1,10 +1,3 @@
-/*
- * Position.h
- *
- *  Created on: 2014/04/02
- *      Author: Shinobu
- */
-
 #ifndef POSITION_H_
 #define POSITION_H_
 
@@ -14,8 +7,24 @@
 class Position{
 public:
 
-	Position(){}
+	Position(){
+		mX = 0;
+		mY = 0;
+		mnode =0;
+	}
+
+	void SetPosition(int x, int y){
+		mX = x;
+		mY = y;
+	}
+
+	void SetNode(int node){
+		mnode = node;
+	}
+
 	virtual~Position(){}
+
+
 
 	bool operator==(const Position& rhs){
 		return (mX == rhs.x()) && (mY == rhs.y());
@@ -33,9 +42,14 @@ public:
 	int y() const { return mY; }
 	int& y()      { return mY; }
 
+	int node() const { return mnode; }
+	int& node()      { return mnode; }
+
 private:
 	int mX;
 	int mY;
+
+	int mnode;
 };
 
 

@@ -4,7 +4,8 @@ int main(){
 
 	RRT rrt;
 
-	rrt.hellow();
+	rrt.q_init();
+	rrt.debug();
 
 	return 0;
 }
