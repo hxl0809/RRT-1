@@ -1,6 +1,8 @@
 #include "RRT.h"
+#include "display.h"
 
-int main(){
+
+int main() {
 
 	RRT rrt;
 

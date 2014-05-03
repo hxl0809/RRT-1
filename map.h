@@ -13,17 +13,14 @@ public:
 	void SetMap();
 	void ViewMap();
 
+	std::vector<Position> Map() { return mmap; }
+
 
 private:
 
 	Position mnode;
 
 	std::vector<Position> mmap;
-
-
-
-
-
 
 };
 

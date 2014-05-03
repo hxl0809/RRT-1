@@ -29,3 +29,4 @@ Position Position::operator*(const Position& rhs){
 
 	return tmp;
 }
+

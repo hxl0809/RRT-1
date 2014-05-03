@@ -1,12 +1,12 @@
 #include "RRT.h"
 
 RRT::RRT(){
-	init.SetPosition(1,1);
-	goal.SetPosition(50,50);
+	//goal.SetPosition(20,20);
 	t = 0;
 	mthre = sqrt(2);
 
 	mMap = new map();
+
 }
 
 
@@ -16,12 +16,16 @@ RRT::RRT(){
 void RRT::q_init(){
 
 	mMap->SetMap();
+
+	ite = mMap->Map().begin();
+
+	//init = *ite;
 }
 
 
 void RRT::RANDOMCONFIG(){
 
-	qrand.SetPosition( (int)(rand()%100)+1, (int)(rand()%100)+1);
+	qrand->SetPosition( (int)(rand()%100)+1, (int)(rand()%100)+1);
 
 //	std::cout << qrand.x() << "\n";
 //	std::cout << qrand.y() << "\n";
@@ -36,10 +40,12 @@ void RRT::EXTEND(){
 		t++;
 	}
 
-	double length = sqrt( (qrand.y()-qnear.y()) + (qrand.x()-qnear.x()) );
+	double length = sqrt( (qrand->y()-qnear->y()) + (qrand->x()-qnear->x()) );
 
 	//ノード間が移動できるなら
 	if(length <= mthre){
+
+		qnew = qrand;
 
 
 	}
