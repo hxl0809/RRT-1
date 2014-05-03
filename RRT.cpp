@@ -47,8 +47,6 @@ void RRT::EXTEND(){
 
 
 	}
-
-
 }
 
 void RRT::debug(){
