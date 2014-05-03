@@ -6,6 +6,7 @@ RRT::RRT(){
 	mthre = sqrt(2);
 
 	mMap = new map();
+	init = new Position();
 
 }
 
@@ -16,10 +17,7 @@ RRT::RRT(){
 void RRT::q_init(){
 
 	mMap->SetMap();
-
-	ite = mMap->Map().begin();
-
-	//init = *ite;
+	//init = ite;
 }
 
 
@@ -56,6 +54,7 @@ void RRT::EXTEND(){
 void RRT::debug(){
 
 	mMap->ViewMap();
+	//mMap->mMap[0].SetPosition(3,3);
 
 }
 

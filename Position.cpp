@@ -30,3 +30,9 @@ Position Position::operator*(const Position& rhs){
 	return tmp;
 }
 
+Position Position::operator=(const Position& rhs){
+
+	this->x() = rhs.x();
+	this->y() = rhs.y();
+}
+

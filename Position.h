@@ -34,6 +34,7 @@ public:
 	Position operator+(const Position& rhs);
 	Position operator-(const Position& rhs);
 	Position operator*(const Position& rhs);
+	Position operator=(const Position& rhs);
 
 
 	int x() const { return mX; }

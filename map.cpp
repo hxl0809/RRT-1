@@ -8,7 +8,9 @@ void map::SetMap(){
 			mnode.SetPosition(j,i);
 			mnode.SetNode(-1);
 
-			mmap.push_back(mnode);
+
+			mMap.push_back(mnode);
+
 		}
 	}
 
@@ -19,9 +21,9 @@ void map::ViewMap(){
 
 	int t=0;
 
-	for(int i=0; i<mmap.size(); i++){
+	for(int i=0; i<mMap.size(); i++){
 
-		std::cout << "(" << mmap[i].x() <<"," << mmap[i].y()
+		std::cout << "(" << mMap[i].x() <<"," << mMap[i].y()
 				<< ")	";
 		t++;
 		if(t == 20) std::cout << std::endl, std::cout << std::endl,t=0;

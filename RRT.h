@@ -35,7 +35,7 @@ private:
 	Position* qnear;
 	Position* qnew;
 
-	std::vector<Position*>::iterator ite ;
+	std::vector<Position>::iterator ite ;
 
 
 };
