@@ -8,6 +8,8 @@ RRT::RRT(){
 	mMap = new map();
 	init = new Position();
 
+	srand((unsigned int)time(NULL));
+
 }
 
 
@@ -17,16 +19,14 @@ RRT::RRT(){
 void RRT::q_init(){
 
 	mMap->SetMap();
-	//init = ite;
+	init = &mMap->mMap[0];
 }
 
 
 void RRT::RANDOMCONFIG(){
 
-	qrand->SetPosition( (int)(rand()%100)+1, (int)(rand()%100)+1);
+	qrand = &mMap->mMap[(int)((rand()%400)+1)];
 
-//	std::cout << qrand.x() << "\n";
-//	std::cout << qrand.y() << "\n";
 }
 
 
@@ -54,8 +54,19 @@ void RRT::debug(){
 	mMap->ViewMap();
 	//mMap->mMap[0].SetPosition(3,3);
 
-}
+	std::cout << init->x() << std::endl;
+	init->SetPosition(20,20);
 
+	std::cout << std::endl;
+	std::cout << init->x() << std::endl;
+
+	mMap->ViewMap();
+	std::cout << mMap->mMap.size() << std::endl;
+
+	std::cout << qrand->x() << std::endl;
+
+
+}
 
 
 
