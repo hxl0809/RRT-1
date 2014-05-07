@@ -13,7 +13,6 @@ void map::SetMap(){
 
 		}
 	}
-
 }
 
 

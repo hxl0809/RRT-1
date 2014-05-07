@@ -19,6 +19,7 @@ private:
 
 	Position mnode;
 
+
 };
 
 

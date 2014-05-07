@@ -16,8 +16,6 @@ public:
 	void RANDOMCONFIG();
 	void EXTEND();
 
-
-
 	void debug();
 
 private:

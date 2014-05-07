@@ -2,6 +2,7 @@
 
 #include "Position.h"
 
+
 Position Position::operator+(const Position& rhs){
 
 	Position tmp;
