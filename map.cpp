@@ -1,3 +1,5 @@
+
+
 #include "map.h"
 
 void map::SetMap(){
@@ -27,5 +29,9 @@ void map::ViewMap(){
 		t++;
 		if(t == 20) std::cout << std::endl, std::cout << std::endl,t=0;
 	}
-
 }
+
+
+
+
+

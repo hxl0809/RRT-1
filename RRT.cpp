@@ -1,3 +1,5 @@
+
+
 #include "RRT.h"
 
 RRT::RRT(){
@@ -48,6 +50,22 @@ void RRT::EXTEND(){
 
 	//ノード間が移動できない場合
 	else{
+
+		//方向
+		int dx = qrand->x() - qnear->x();
+		int dy = qrand->y() - qnear->y();
+
+		//第一象限
+		if(dx> 0  && dy> 0){
+
+		}
+		//第二象限
+		if(dx<=0  && dy> 0);
+		//第三
+		if(dx<=0  && dy<=0);
+		//第四
+		if(dx> 0  && dy<=0);
+
 
 		std::cout << std::endl;
 	}
