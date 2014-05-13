@@ -58,14 +58,18 @@ void RRT::EXTEND(){
 		//第一象限
 		if(dx> 0  && dy> 0){
 
+			qnew = &mMap->mMap[0];
 		}
 		//第二象限
-		if(dx<=0  && dy> 0);
+		if(dx<0  && dy> 0);
 		//第三
-		if(dx<=0  && dy<=0);
+		if(dx<0  && dy<0);
 		//第四
-		if(dx> 0  && dy<=0);
-
+		if(dx>0  && dy<0);
+		//y軸上
+		if(dx>0 && dy=0);
+		if(dx<0 && dy=0);
+		//x軸上
 
 		std::cout << std::endl;
 	}
@@ -76,6 +80,7 @@ void RRT::debug(){
 
 
 	std::cout << qrand->x() << " " << qrand->y() << std::endl;
+	mMap->ViewMap();
 
 
 }
